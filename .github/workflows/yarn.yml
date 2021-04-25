@@ -12,8 +12,9 @@ on:
 jobs:
   build:
 
-    runs-on: ubuntu-latest
-
+    runs-on: 
+      matrix:
+        node-version: [windows-latest, ubuntu-latest]
     strategy:
       matrix:
         node-version: [14.x]
