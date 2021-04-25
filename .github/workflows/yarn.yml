@@ -26,10 +26,10 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - uses: actions/checkout@v2
-    - uses: borales/actions-yarn@v2.0.0
+    - uses: borales/actions-yarn@v2.3.0
       with:
         cmd: setup # will run `yarn setup` command
-    - uses: borales/actions-yarn@v2.0.0
+    - uses: borales/actions-yarn@v2.3.0
       with:
         cmd: dist # will run `yarn dist` command
 
