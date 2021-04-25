@@ -21,6 +21,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+    - uses: egordm/gha-yarn-node-cache@v1    
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v2
       with:
@@ -32,5 +33,6 @@ jobs:
     - uses: borales/actions-yarn@v2.3.0
       with:
         cmd: dist # will run `yarn dist` command
+
 
 
