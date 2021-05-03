@@ -5,20 +5,18 @@ name: Node.js CI
 
 on:
   push:
-    branches: [ develop ]
+    branches: [ develop-customderivation  ]
   pull_request:
-    branches: [ develop ]
+    branches: [ develop-customderivation  ]
 
 jobs:
   build:
 
-    runs-on: ubuntu-latest
-
+    runs-on: ${{ matrix.os }}
     strategy:
       matrix:
         node-version: [14.x]
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
-
+        os: [ubuntu-latest]
     steps:
     - uses: actions/checkout@v2
     - name: Use Node.js ${{ matrix.node-version }}
@@ -26,20 +24,29 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - run: yarn setup
-    - run: yarn dist    
+    - run: yarn dist
+    
     - name: Archive Release
       uses: thedoctor0/zip-release@master
       with:
-        filename: 'release.zip'
+        filename: 'dist_chrome.zip'
         #exclusions: '*.git* /*node_modules/* .editorconfig'
-        #path
+        path: dist/chrome/
 
-    - name: Archive Release
+    - name: Archive Release2
+      uses: thedoctor0/zip-release@master
+      with:
+        filename: 'dist_brave.zip'
+        #exclusions: '*.git* /*node_modules/* .editorconfig'
+        path: dist/brave/
+
+    - name: Publish Release
       uses: "marvinpinto/action-automatic-releases@latest"
       with:
         repo_token: "${{ secrets.GITHUB_TOKEN }}"
-        automatic_release_tag: "latest"
+        automatic_release_tag: "latest_devplan"
         prerelease: true
-        title: "Production Build"
+        title: "DEV Build DIST"
         files: |
-          release.zip 
+          *.zip
+          builds/*.zip
