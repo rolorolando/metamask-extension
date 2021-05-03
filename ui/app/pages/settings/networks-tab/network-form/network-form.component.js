@@ -350,23 +350,27 @@ export default class NetworkForm extends PureComponent {
     // (address_index) ommited
     //bip44rx = /^m\/([^/]+)'\/([^/]+)'\/([^/]+)'\/([^/]+)$/;
     let errorMessage = '';
-    let [m, purpose, coin_type, account, change] = dpath.split("/").map(a => a.trim());
-    let valid = m !== "m" && purpose.endsWith("'") && coin_type.endsWith("'") && account.endsWith("'");
-    if(valid){
-      purpose=purpose.slice(0, -1);
-      coin_type = coin_type.slice(0, -1);
-      account = account.slice(0, -1);
+    let elms=dpath.split("/").map(a => a.trim());
+    let valid = elms.length == 5;
+    if (valid){
+      let [m, purpose, coin_type, account, change] = elms;
+      valid = m === "m" && purpose.endsWith("'") && coin_type.endsWith("'") && account.endsWith("'");
+      if(valid){
+        purpose=purpose.slice(0, -1);
+        coin_type = coin_type.slice(0, -1);
+        account = account.slice(0, -1);
 
-      valid= validateDerivationPathNumber(purpose)==="" &&
-      validateDerivationPathNumber(coin_type) === "" &&
-      validateDerivationPathNumber(account) === "" &&
-      validateDerivationPathNumber(change) === "";
-      if(!valid){
-        errorMessage = "Invalid Derivation Path Components";
+        valid= validateDerivationPathNumber(purpose)==="" &&
+        validateDerivationPathNumber(coin_type) === "" &&
+        validateDerivationPathNumber(account) === "" &&
+        validateDerivationPathNumber(change) === "";
+        if(!valid){
+          errorMessage = "Invalid Derivation Path Components";
+        }
+        
+      } else{
+        errorMessage = "Invalid Custom Derivation Path";//this.context.t('invalidNumber');
       }
-      
-    } else{
-      errorMessage = "Invalid Custom Derivation Path";//this.context.t('invalidNumber');
     }
     
     this.setErrorTo('customDerivationPath', errorMessage);
@@ -385,7 +389,7 @@ export default class NetworkForm extends PureComponent {
       }
     } else if (!/^[0-9]+$/u.test(pathNumber)) {
       errorMessage = this.context.t('invalidNumber');
-    } else if (pathNumber.startsWith('0')) {
+    } else if (pathNumber!=="0" && pathNumber.startsWith('0')) {
       errorMessage = this.context.t('invalidNumberLeadingZeros');
     }/* else if (!isSafeChainId(parseInt(pathNumber, radix))) {
       errorMessage = this.context.t('invalidChainIdTooBig');
@@ -500,7 +504,7 @@ export default class NetworkForm extends PureComponent {
       networkName,
       rpcUrl,
       chainId = '',
-      customDerivationPath= 'hmmm',
+      customDerivationPath = "m/44'/0'/0'/0",
       ticker,
       blockExplorerUrl,
       errors,
