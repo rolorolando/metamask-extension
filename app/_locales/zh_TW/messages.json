@@ -176,6 +176,9 @@
   "chainId": {
     "message": "鏈 ID"
   },
+  "customDerivationPath": {
+    "message": "Derivation Path"
+  },
   "chromeRequiredForHardwareWallets": {
     "message": "您需要在 Google Chrome 瀏覽器使用 MetaMask 連結您的硬體錢包"
   },

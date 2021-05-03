@@ -253,6 +253,9 @@
   "chromeRequiredForHardwareWallets": {
     "message": "Debes utilizar MetaMask en Google Chrome para poder conectarte a tu billetera de hardware."
   },
+  "customDerivationPath": {
+    "message": "Derivation Path"
+  },
   "clickToRevealSeed": {
     "message": "Haz clic aquí para mostrar las palabras secretas"
   },

@@ -164,6 +164,9 @@
   "chainId": {
     "message": "Αναγνωριστικό Αλυσίδας"
   },
+  "customDerivationPath": {
+    "message": "Derivation Path"
+  },
   "chromeRequiredForHardwareWallets": {
     "message": "Θα πρέπει να χρησιμοποιήσετε το MetaMask στο Google Chrome για να συνδεθείτε στο Πορτοφόλι Υλικού."
   },

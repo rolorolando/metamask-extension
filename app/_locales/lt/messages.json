@@ -167,6 +167,9 @@
   "chainId": {
     "message": "Grandinės ID"
   },
+  "customDerivationPath": {
+    "message": "Derivation Path"
+  },
   "chromeRequiredForHardwareWallets": {
     "message": "Norėdami prisijungti prie aparatinės įrangos slaptažodinės, „MetaMask“ naudokitės „Google Chrome“ naršyklėje."
   },

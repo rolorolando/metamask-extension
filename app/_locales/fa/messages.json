@@ -167,6 +167,9 @@
   "chainId": {
     "message": "آی دی زنجیره"
   },
+  "customDerivationPath": {
+    "message": "Derivation Path"
+  },
   "chromeRequiredForHardwareWallets": {
     "message": "برای وصل شدن به کیف سخت افزار شما باید MetaMask را در گوگل کروم استفاده نمایید."
   },

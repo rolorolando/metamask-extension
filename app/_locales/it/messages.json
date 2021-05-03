@@ -250,6 +250,9 @@
   "chainId": {
     "message": "Chain ID"
   },
+  "customDerivationPath": {
+    "message": "Derivation Path"
+  },
   "chromeRequiredForHardwareWallets": {
     "message": "Devi usare MetaMask con Google Chrome per connettere il tuo Portafoglio Hardware"
   },

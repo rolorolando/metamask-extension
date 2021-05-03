@@ -167,6 +167,9 @@
   "chainId": {
     "message": "ID verige"
   },
+  "customDerivationPath": {
+    "message": "Derivation Path"
+  },
   "chromeRequiredForHardwareWallets": {
     "message": "Za uporabo strojne denarnice potrebujete Google Chrome."
   },

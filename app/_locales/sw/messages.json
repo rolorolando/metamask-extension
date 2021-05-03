@@ -161,6 +161,9 @@
   "chainId": {
     "message": "Utambulisho wa Mnyororo"
   },
+  "customDerivationPath": {
+    "message": "Derivation Path"
+  },
   "chromeRequiredForHardwareWallets": {
     "message": "Unapaswa kutumia MetaMask kwenye Google Chrome ili kuungnisha kwenye Waleti yako ya Programu Maunzi."
   },

@@ -250,6 +250,9 @@
   "chainId": {
     "message": "链 ID"
   },
+  "customDerivationPath": {
+    "message": "Derivation Path"
+  },
   "chromeRequiredForHardwareWallets": {
     "message": "您需要在谷歌浏览器（Google Chrome）上使用 MetaMask 才能连接到您的硬件钱包。"
   },

@@ -167,6 +167,9 @@
   "chainId": {
     "message": "Ketjun tunnus"
   },
+  "customDerivationPath": {
+    "message": "Derivation Path"
+  },
   "chromeRequiredForHardwareWallets": {
     "message": "Sinun tarvitsee käyttää MetaMaskia Google Chromessa voidaksesi yhdistää laitteistokukkaroosi."
   },

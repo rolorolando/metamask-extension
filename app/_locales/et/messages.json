@@ -167,6 +167,9 @@
   "chainId": {
     "message": "Ahela ID"
   },
+  "customDerivationPath": {
+    "message": "Derivation Path"
+  },
   "chromeRequiredForHardwareWallets": {
     "message": "Riistvararahakoti ühendamiseks peate kasutama MetaMaski Google Chrome'is."
   },

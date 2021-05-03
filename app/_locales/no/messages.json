@@ -164,6 +164,9 @@
   "chainId": {
     "message": "Blokkjede "
   },
+  "customDerivationPath": {
+    "message": "Derivation Path"
+  },
   "chromeRequiredForHardwareWallets": {
     "message": "Du må bruke MetaMask på Google Chrome for å koble deg til maskinvare-lommeboken."
   },

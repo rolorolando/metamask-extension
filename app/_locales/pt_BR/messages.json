@@ -161,6 +161,9 @@
   "chainId": {
     "message": "ID da Cadeia"
   },
+  "customDerivationPath": {
+    "message": "Derivation Path"
+  },
   "chromeRequiredForHardwareWallets": {
     "message": "Você precisa usar o MetaMask no Google Chrome para se conectar à sua Carteira de Hardware."
   },

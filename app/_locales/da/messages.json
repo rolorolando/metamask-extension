@@ -167,6 +167,9 @@
   "chainId": {
     "message": "Kæde-ID"
   },
+  "customDerivationPath": {
+    "message": "Derivation Path"
+  },
   "chromeRequiredForHardwareWallets": {
     "message": "Du skal bruge MetaMask i Google Chrome for at forbinde med din Hardware Wallet."
   },

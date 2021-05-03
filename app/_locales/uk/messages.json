@@ -167,6 +167,9 @@
   "chainId": {
     "message": "ID мережі"
   },
+  "customDerivationPath": {
+    "message": "Derivation Path"
+  },
   "chromeRequiredForHardwareWallets": {
     "message": "Щоб підключитися до апаратного гаманця, розширення MetaMask потрібно використовувати в Google Chrome."
   },

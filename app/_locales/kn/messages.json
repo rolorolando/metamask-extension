@@ -167,6 +167,9 @@
   "chainId": {
     "message": "ಚೈನ್ ID"
   },
+  "customDerivationPath": {
+    "message": "Derivation Path"
+  },
   "chromeRequiredForHardwareWallets": {
     "message": "ನಿಮ್ಮ ಹಾರ್ಡ್‌ವೇರ್ ವ್ಯಾಲೆಟ್‌ಗೆ ಸಂಪರ್ಕಪಡಿಸುವ ಸಲುವಾಗಿ Google Chrome ನಲ್ಲಿ ನಿಮಗೆ MetaMask ಅನ್ನು ಬಳಸುವ ಅಗತ್ಯವಿದೆ."
   },

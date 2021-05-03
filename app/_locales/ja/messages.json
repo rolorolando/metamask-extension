@@ -250,6 +250,9 @@
   "chainId": {
     "message": "チェーンID"
   },
+  "customDerivationPath": {
+    "message": "Derivation Path"
+  },
   "chromeRequiredForHardwareWallets": {
     "message": "ハードウェアウォレットへ接続するには、MetaMask on Google Chrome を使用する必要があります。"
   },

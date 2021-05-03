@@ -250,6 +250,9 @@
   "chainId": {
     "message": "ID de Cadena"
   },
+  "customDerivationPath": {
+    "message": "Derivation Path"
+  },
   "chromeRequiredForHardwareWallets": {
     "message": "Hay que usar MetaMask en Google Chrome para poder conectarse con tu Monedero Físico."
   },

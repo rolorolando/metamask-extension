@@ -167,6 +167,9 @@
   "chainId": {
     "message": "معرّف السلسلة"
   },
+  "customDerivationPath": {
+    "message": "Derivation Path"
+  },
   "chromeRequiredForHardwareWallets": {
     "message": "تحتاج إلى استخدام MetaMask على Google Chrome للاتصال بمحفظة الأجهزة الخاصة بك."
   },

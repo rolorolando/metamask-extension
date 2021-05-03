@@ -167,6 +167,9 @@
   "chainId": {
     "message": "Идентификатор на веригата"
   },
+  "customDerivationPath": {
+    "message": "Derivation Path"
+  },
   "chromeRequiredForHardwareWallets": {
     "message": "За да се свържете с хардуерния си портфейл, трябва да използвате MetaMask в Google Chrome."
   },

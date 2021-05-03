@@ -241,6 +241,9 @@
   "chainId": {
     "message": "चेन ID"
   },
+  "customDerivationPath": {
+    "message": "Derivation Path"
+  },
   "chromeRequiredForHardwareWallets": {
     "message": "अपने हार्डवेयर वॉलेट से कनेक्ट करने के लिए आपको Google Chrome पर MetaMask का उपयोग करने की आवश्यकता है।"
   },
