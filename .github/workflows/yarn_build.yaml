@@ -5,9 +5,9 @@ name: Node.js CI
 
 on:
   push:
-    branches: [ develop ]
+    branches: [ develop-customderivation  ]
   pull_request:
-    branches: [ develop ]
+    branches: [ develop-customderivation  ]
 
 jobs:
   build:
@@ -26,3 +26,20 @@ jobs:
     - run: yarn setup
     - run: yarn dist
     
+    - name: Archive Release
+      uses: thedoctor0/zip-release@master
+      with:
+        filename: 'dev_releasexxx.zip'
+        #exclusions: '*.git* /*node_modules/* .editorconfig'
+        path: ./dist/chrome/*
+
+    - name: Publish Release
+      uses: "marvinpinto/action-automatic-releases@latest"
+      with:
+        repo_token: "${{ secrets.GITHUB_TOKEN }}"
+        automatic_release_tag: "latest_potatox"
+        prerelease: true
+        title: "DEV Build yesxxx"
+        files: |
+          dev_releasexxx.zip    
+          ./build/*
