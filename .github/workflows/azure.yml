@@ -1,23 +1,22 @@
 # This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
 
-name: Node dev build
+name: Node.js CI
 
 on:
   push:
-    branches: [ develop ]
+    branches: [ develop  ]
   pull_request:
-    branches: [ develop ]
+    branches: [ develop  ]
 
 jobs:
   build:
-    runs-on: ubuntu-latest
 
+    runs-on: ${{ matrix.os }}
     strategy:
       matrix:
         node-version: [14.x]
-
-
+        os: [ubuntu-latest]
     steps:
     - uses: actions/checkout@v2
     - name: Use Node.js ${{ matrix.node-version }}
@@ -25,20 +24,39 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - run: yarn setup
-    - run: yarn build dev
+    - run: yarn start
+
+
+    
     - name: Archive Release
       uses: thedoctor0/zip-release@master
       with:
-        filename: 'dev_release.zip'
+        filename: 'dist_chrome.zip'
         #exclusions: '*.git* /*node_modules/* .editorconfig'
-        #path
+        path: dist/chrome/
 
+    - name: Archive Release2
+      uses: thedoctor0/zip-release@master
+      with:
+        filename: 'dist_brave.zip'
+        #exclusions: '*.git* /*node_modules/* .editorconfig'
+        path: dist/brave/
+        
+    - name: Archive Big Tart
+      uses: thedoctor0/zip-release@master
+      with:
+        filename: 'bigtar.zip'
+        #exclusions: '*.git* /*node_modules/* .editorconfig'
+        
+        
     - name: Publish Release
       uses: "marvinpinto/action-automatic-releases@latest"
       with:
         repo_token: "${{ secrets.GITHUB_TOKEN }}"
-        automatic_release_tag: "latest_potato"
+        automatic_release_tag: "latest_devvv"
         prerelease: true
-        title: "DEV Build yes"
+        title: "DEV Build plaush"
         files: |
-          dev_release.zip     
+          *.zip
+          builds/*.zip          
+        
