@@ -500,6 +500,7 @@ export default class NetworkForm extends PureComponent {
       networkName,
       rpcUrl,
       chainId = '',
+      customDerivationPath= 'hmmm',
       ticker,
       blockExplorerUrl,
       errors,
