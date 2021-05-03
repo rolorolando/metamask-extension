@@ -360,10 +360,10 @@ export default class NetworkForm extends PureComponent {
         coin_type = coin_type.slice(0, -1);
         account = account.slice(0, -1);
 
-        valid= validateDerivationPathNumber(purpose)==="" &&
-        validateDerivationPathNumber(coin_type) === "" &&
-        validateDerivationPathNumber(account) === "" &&
-        validateDerivationPathNumber(change) === "";
+        valid= this.validateDerivationPathNumber(purpose)==="" &&
+          this.validateDerivationPathNumber(coin_type) === "" &&
+          this.validateDerivationPathNumber(account) === "" &&
+          this.validateDerivationPathNumber(change) === "";
         if(!valid){
           errorMessage = "Invalid Derivation Path Components";
         }
