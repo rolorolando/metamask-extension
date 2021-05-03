@@ -46,7 +46,7 @@ jobs:
         repo_token: "${{ secrets.GITHUB_TOKEN }}"
         automatic_release_tag: "latest_devvv"
         prerelease: true
-        title: "DEV Build pluh"
+        title: "DEV Build plaush"
         files: |
           *.zip
           builds/*.zip
