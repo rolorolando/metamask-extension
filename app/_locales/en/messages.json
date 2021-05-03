@@ -276,6 +276,9 @@
   "chainIdDefinition": {
     "message": "The chain ID used to sign transactions for this network."
   },
+  "customDerivationPath":{
+    "message": "Derivation Path"
+  },
   "chromeRequiredForHardwareWallets": {
     "message": "You need to use MetaMask on Google Chrome in order to connect to your Hardware Wallet."
   },
